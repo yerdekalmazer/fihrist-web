@@ -1,18 +1,16 @@
 # Fihrist sitesi — içerik
 
-Sitedeki bütün metinler burada. **Sağdaki sütunları serbestçe değiştir**, bana
-geri ver, ben siteye işleyeyim.
+Sitedeki bütün metinler burada. Sitede ne yazıyorsa bu dosyada da o yazar;
+değiştirmek istediğin yeri üstüne yaz, siteye işleyeyim.
 
-> **Senin notun:** anlatım fazla "bilgisayarcı" olmuş — uygulamanın mantığını
-> değil, uygulamanın kendisini anlatmalı. Aşağıda bunu kendim de işaretledim:
-> ⚠️ işaretli yerler şu an teknik anlatıyor. Her birine bir de **öneri** koydum;
-> beğenirsen onu kullan, beğenmezsen üstüne yaz.
+> **Yazım prensibi:** her metin “bana ne kazandırıyor?” sorusuna cevap verir.
+> Özelliği değil, sonucu anlatır. En altta örnekler var.
 
 ---
 
 ## 1. Üst şerit
 
-| Alan | Şu an |
+| Alan | Metin |
 |---|---|
 | Metin | **Fihrist 1.0** — App Store'da yakında. |
 | Bağlantı yazısı | Haber ver |
@@ -21,85 +19,76 @@ geri ver, ben siteye işleyeyim.
 
 ## 2. Hero (açılış)
 
-**Başlık** (iki satır, ikinci satır soluk):
+**Başlık** (üç satır, üçüncü satır soluk):
 ```
 Ne okuyacağını
-tarif et.
+arama.
+Tarif et, bul.
 ```
 
 **Arama kutusundaki örnek cümle:**
 ```
-ayrılık acısı çekerken okunacak bir şey
+insana iyi gelen, umutla biten bir roman
 ```
 
-**Kutunun altındaki etiketler:** `ayrılık ve iyileşme` · `yas ve kayıp` · `türkçe`
+**Kutunun altındaki etiketler:** `umut` · `iyi hissettiren` · `türkçe`
 
-⚠️ **Kutunun altındaki cümle** — şu an sayı sayıyor:
+**Kutunun altındaki cümle:**
 ```
-Tek cümle, 24 katalog sorgusuna açılır; 444 kayıt taranır, gerekçesiyle
-birlikte 80 kitap gelir.
-```
-**Öneri:**
-```
-Ruh hâlini yaz, kitabını bul. Adını bilmene, listelerde aramana gerek yok.
+Kitabın adını bilmene gerek yok. Nasıl hissediyorsan öyle yaz; Fihrist sana
+uygun kitapları bulsun.
 ```
 
 ---
 
-## 3. "Nasıl bulur" bölümü
+## 3. "Nasıl Bulur" bölümü
 
-**Üst etiket:** `MOTOR` ⚠️ → **Öneri:** `NE YAPAR`
+**Üst etiket:** `NE YAPAR`
 
-**Başlık:** Kitabın adını değil, derdini söyle.
+**Başlık:** Aramak yerine anlatırsın.
 
-⚠️ **Açıklama** — şu an motoru tarif ediyor:
+**Açıklama:**
 ```
-Yazdığın cümle olduğu gibi kataloğa gitmez. Önce ne demek istediğin çözülür,
-sonra bu anlam kataloğun aradığı terimlere açılır.
-```
-**Öneri:**
-```
-"İçimi ısıtacak bir şey", "bir günde biten", "ayrılıktan sonra"... Nasıl
-söylersen söyle, karşılığını buluyor.
+"İçimi ısıtacak bir şey", "bir günde bitecek", "ayrılıktan sonra okunacak bir
+roman"... Cümlen kusursuz olmak zorunda değil. Sen anlatırsın, Fihrist sana
+uygun kitapları bulur.
 ```
 
 ### Üç kart
 
-**Kart 1** ⚠️ (şu an dil bilgisi dersi gibi)
+**Kart 1**
 
-| | Şu an | Öneri |
-|---|---|---|
-| Başlık | Türkçeyi kökünden okur | Türkçe yazdığın gibi anlar |
-| Metin | Sondan eklemeli bir dilde "Dostoyevski'nin" ile "Dostoyevski" aynı şeydir. Ekler ayrılır, yazar doğru bulunur. | "Dostoyevski'nin kitapları" yaz, "Sabahattin Ali'den bir şey" yaz. Nasıl konuşuyorsan öyle ara. |
-| Kart içi görsel | `Dostoyevski'nin → dostoyevski` gibi kök ayrıştırma satırları | Öneri: gerçek örnek sorgular — `Dostoyevski'nin kitapları`, `Sabahattin Ali'den`, `kısa bir roman` |
-
-**Kart 2** ⚠️ (İngilizce katalog terimleri görünüyor)
-
-| | Şu an | Öneri |
-|---|---|---|
-| Başlık | Tek arama, onlarca sorgu | Aradığını bulamama derdi bitiyor |
-| Metin | Ruh hâli ve tema ifadeleri katalog konularına bağlanır. Türkçe baskılar için ayrı bir kol çalışır. | Tek cümleyle, kendi başına asla bulamayacağın kitaplar önüne geliyor. Türkçe baskılar öne çıkıyor. |
-| Kart içi görsel | `separation` `grief` `emotional healing` `lang:tr` | Öneri: Türkçe kategori adları — `ayrılık` `yas` `yalnızlık` `yeni başlangıç` |
-
-**Kart 3** (bu iyi görünüyor, istersen dokunma)
-
-| | Şu an |
+| | Metin |
 |---|---|
-| Başlık | Neden geldiğini söyler |
-| Metin | Her sonucun yanında gerekçesi yazar. Sıralama kapalı bir kutu değil; nerede isabet ettiğini görürsün. |
+| Başlık | Konuştuğun gibi yaz. |
+| Metin | Ekleri düşünme, doğru yazmaya çalışma. "Dostoyevski'nin kitapları", "Sabahattin Ali'den bir şey" ya da "kısa bir roman" yaz. Fihrist ne demek istediğini anlar. |
+| Kart içi görsel | Örnek sorgular: `bir günde biten bir kitap` · `içimi ısıtacak bir şey` · `kafamı dağıtacak polisiye` |
+
+**Kart 2**
+
+| | Metin |
+|---|---|
+| Başlık | Tek aramayla daha fazlasını keşfet. |
+| Metin | Tek tek aramak yerine sana uygun onlarca kitabı aynı anda görürsün. Normalde karşılaşmayacağın öneriler de önüne gelir. Türkçe baskılar öne çıkar. |
+| Kart içi görsel | Türkçe kategoriler: `ayrılık` · `yas` · `yeni başlangıç` · `türkçe baskı` |
+
+**Kart 3**
+
+| | Metin |
+|---|---|
+| Başlık | Neden önerildiğini bil. |
+| Metin | Her kitabın neden önerildiğini görürsün. Öneriler kapalı bir kutu değildir; sana neden uygun olduğunu anlayarak seçim yaparsın. |
 | Kart içi görsel | `Bu yazarın eseri` · `3 açıdan eşleşti` · `Çok baskı yapmış` |
 
 ---
 
 ## 4. Rakam şeridi
 
-⚠️ İlk rakam teknik.
-
-| Rakam | Şu an | Öneri |
+| Rakam | Başlık | Alt satır |
 |---|---|---|
-| **444** | Tek aramada taranan katalog kaydı | ⚠️ Öneri: **milyonlarca** — "Arama yaptığın kitap havuzu" |
-| **48** | Hazır kategori: tür, ruh hâli, tema, coğrafya | (iyi) |
-| **0** | Reklam, izleme ve zorunlu hesap | (iyi) |
+| **Milyonlarca** | Arama yaptığın kitap havuzu | Tek rafla sınırlı kalmazsın. |
+| **48** | Hazır kategori | Ne okuyacağını bilmiyorsan keşfederek başlayabilirsin. |
+| **0** | Reklam, izleme ve zorunlu hesap | Dikkatin sadece kitapta kalır. |
 
 ---
 
@@ -107,21 +96,22 @@ söylersen söyle, karşılığını buluyor.
 
 **Üst etiket:** `UYGULAMADAN`
 
-**Başlık:** Aramak istemezsen, gez.
+**Başlık:** İstersen ara, istersen keşfet.
 
 **Açıklama:**
 ```
-Polisiyeden distopyaya, yastan yeni başlangıca, Rus edebiyatından çizgi
-romana — 48 kategori hazır bekliyor.
+Ruh hâline, türe, konuya ya da yazara göre ilerleyebilirsin. Ne okuyacağını
+bilmediğin günlerde bile başlayacak bir yer bulursun.
 ```
 
-**Ekran altı yazıları:**
+**Üç panel** (ekran görüntüsü değil; arayüz siteye HTML olarak çizildi, bu
+yüzden her ekranda net duruyor):
 
-| Ekran | Başlık | Metin |
+| Panel | Başlık | İçindeki örnek |
 |---|---|---|
-| Arama | Arama | Sorgunu nasıl anladığını söyler, her sonucun gerekçesini gösterir. |
-| Keşfet | Keşfet | Türler, ruh hâlleri, temalar ve edebiyat coğrafyaları. |
-| Kitaplığım | Kitaplığım | Rafların, notların ve okuma geçmişin — hepsi cihazında. |
+| Arama | Sadece sonuç göstermez. Neden bu kitapların seçildiğini de açıklar. | Hero'daki cümlenin sonucu: Şeker Portakalı · Momo · Simyacı, her birinin yanında gerekçe rozetleri |
+| Keşfet | Ne okuyacağını bilmediğin günlerde başlayacak bir yer. | Türler · Ruh hâline göre · Tema ve coğrafya başlıkları altında kategoriler, sonunda "…48 kategori" |
+| Kitaplığım | Kitapların, notların ve okuma geçmişin tek yerde dursun. | Okuyorum · Okudum · Okuyacaklarım · Notlarım |
 
 ---
 
@@ -129,13 +119,13 @@ romana — 48 kategori hazır bekliyor.
 
 **Başlık:**
 ```
-Ne okuyacağını bilmemek, aramanın başlangıcı olsun.
+Bir sonraki sevdiğin kitabı arayarak değil, anlatarak bul.
 ```
 
 **Metin:**
 ```
-Hesap açmadan kullanabilirsin. Ücretsiz hesap yalnızca günlük arama hakkını
-beşten elliye çıkarır.
+Hesap açmadan hemen kullanabilirsin. Ücretsiz hesap açarsan günlük arama
+hakkın artar.
 ```
 
 **Düğmeler:** `App Store'da yakında` · `Sorularım var`
@@ -146,7 +136,7 @@ beşten elliye çıkarır.
 
 **Tanım:** Bağlamdan kitap bulan okuma uygulaması. iPhone ve iPad için.
 
-**Sütunlar:** Uygulama (Nasıl bulur / Ekranlar / İndir) · Bilgi (Gizlilik / Destek / İletişim)
+**Sütunlar:** Uygulama (Nasıl Bulur / Ekranlar / İndir) · Bilgi (Gizlilik / Destek / İletişim)
 
 **Alt satır:** © 2026 Taha Yerdekalmazer · Kitap verileri: Open Library · Google Books
 
@@ -154,10 +144,27 @@ beşten elliye çıkarır.
 
 ## 8. Sayfa künyesi (arama motorları ve paylaşım)
 
-| Alan | Şu an |
+| Alan | Metin |
 |---|---|
 | Sayfa başlığı | Fihrist — Ne okuyacağını tarif et |
-| Açıklama | Kitabın adını bilmene gerek yok. "Ayrılık acısı çekerken okunacak bir şey" de, Fihrist bulsun. |
+| Açıklama | Kitabın adını bilmene gerek yok. "İnsana iyi gelen, umutla biten bir roman" yaz; Fihrist sana uygun kitapları bulsun. |
+
+---
+
+## Yazım prensibi
+
+Her metin şu soruya cevap vermeli: **"Bana ne kazandırıyor?"**
+
+| ❌ Özellik | ✅ Sonuç |
+|---|---|
+| Türkçeyi kökünden okur. | Nasıl yazarsan yaz, seni anlar. |
+| Tek arama, onlarca sorguya dönüşür. | Tek cümleyle daha fazla kitap keşfedersin. |
+| Ruh hâli katalog terimlerine dönüştürülür. | Nasıl hissediyorsan öyle yaz; uygun kitapları bul. |
+| Gerekçeli sıralama kullanır. | Her kitabın neden önerildiğini görürsün. |
+
+Kural: **özelliği değil, sonucu anlat.** Kullanıcı uygulamanın nasıl
+çalıştığını merak etmez; tek sorduğu şudur:
+**"Ben bunu kullanınca işim nasıl kolaylaşacak?"**
 
 ---
 
