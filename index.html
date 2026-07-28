@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fihrist — Bağlamdan kitap bulun</title>
+<meta name="description" content="Kitap adını bilmenize gerek yok. Ne okumak istediğinizi gündelik Türkçeyle anlatın, Fihrist bunu kitaba çevirsin.">
+<link rel="icon" href="gorseller/ikon.png">
+<meta property="og:title" content="Fihrist — Bağlamdan kitap bulun">
+<meta property="og:description" content="“Ayrılık acısı çekerken okunacak bir şey” deyin, kitap gelsin.">
+<meta property="og:image" content="gorseller/1-anasayfa.png">
+<style>
+  :root {
+    --ink:#1d1a17; --soft:#57514b; --faint:#8a827a;
+    --accent:#6b452f; --accent-soft:rgba(107,69,47,.10);
+    --line:#e6e1db; --bg:#faf9f7; --card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink:#f2efec; --soft:#c3bcb5; --faint:#8f8880;
+      --accent:#c89b7b; --accent-soft:rgba(200,155,123,.12);
+      --line:#332e29; --bg:#14110d; --card:#1c1813;
+    }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 24px; }
+
+  /* Üst çubuk */
+  nav { border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10;
+        background:color-mix(in srgb, var(--bg) 92%, transparent);
+        backdrop-filter:saturate(160%) blur(12px); }
+  nav .wrap { display:flex; align-items:center; gap:14px; height:62px; }
+  .logo { display:flex; align-items:center; gap:10px; font-weight:650; letter-spacing:-.01em; }
+  .logo img { width:28px; height:28px; border-radius:7px; }
+  nav .spacer { flex:1; }
+  nav a.link { color:var(--soft); text-decoration:none; font-size:15px; }
+  nav a.link:hover { color:var(--ink); }
+
+  /* Hero */
+  header { padding:76px 0 8px; }
+  .hero { display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+  h1 { font-size:52px; line-height:1.05; letter-spacing:-.035em; margin:0 0 18px; }
+  .lead { font-size:20px; color:var(--soft); margin:0 0 28px; }
+  .quote { display:inline-block; background:var(--accent-soft); color:var(--accent);
+           padding:9px 15px; border-radius:999px; font-size:15px; margin-bottom:22px; }
+  .cta-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .badge { display:inline-flex; align-items:center; gap:9px; background:var(--ink); color:var(--bg);
+           padding:13px 22px; border-radius:12px; text-decoration:none; font-weight:600; font-size:16px; }
+  .badge small { display:block; font-size:11px; font-weight:400; opacity:.75; line-height:1.2; }
+  .note { font-size:14px; color:var(--faint); }
+
+  .shot { display:block; width:100%; max-width:330px; margin:0 auto; border-radius:26px;
+          border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.14); }
+
+  /* Bölümler */
+  section { padding:82px 0; border-top:1px solid var(--line); }
+  h2 { font-size:32px; letter-spacing:-.025em; margin:0 0 10px; }
+  .sub { color:var(--soft); font-size:18px; margin:0 0 40px; max-width:620px; }
+
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; }
+  .step .num { display:inline-grid; place-items:center; width:30px; height:30px; border-radius:9px;
+               background:var(--accent-soft); color:var(--accent); font-weight:700; font-size:14px;
+               margin-bottom:14px; }
+  .step h3 { margin:0 0 8px; font-size:18px; letter-spacing:-.01em; }
+  .step p { margin:0; color:var(--soft); font-size:15.5px; }
+
+  .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:start; }
+  .gallery figure { margin:0; }
+  .gallery img { width:100%; border-radius:18px; border:1px solid var(--line);
+                 box-shadow:0 12px 34px rgba(0,0,0,.09); }
+  .gallery figcaption { margin-top:12px; font-size:15px; color:var(--faint); }
+
+  .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:8px; }
+  .fact { border:1px solid var(--line); border-radius:14px; padding:22px; background:var(--card); }
+  .fact .big { font-size:30px; font-weight:650; letter-spacing:-.02em; color:var(--accent); }
+  .fact p { margin:6px 0 0; color:var(--soft); font-size:15.5px; }
+
+  footer { border-top:1px solid var(--line); padding:44px 0 60px; color:var(--faint); font-size:15px; }
+  footer a { color:var(--accent); text-decoration:none; }
+  footer .row { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:14px; }
+
+  @media (max-width:860px) {
+    .hero { grid-template-columns:1fr; gap:36px; }
+    h1 { font-size:38px; }
+    .steps, .gallery, .facts { grid-template-columns:1fr; }
+    header { padding-top:48px; }
+    section { padding:60px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><img src="gorseller/ikon.png" alt="">Fihrist</div>
+    <div class="spacer"></div>
+    <a class="link" href="#nasil">Nasıl çalışır</a>
+    <a class="link" href="#ekranlar">Ekranlar</a>
+    <a class="link" href="destek.html">Destek</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap hero">
+    <div>
+      <div class="quote">“ayrılık acısı çekerken okunacak bir şey”</div>
+      <h1>Ne okuyacağınızı<br>tarif edin, yeter.</h1>
+      <p class="lead">
+        Kitap adını bilmenize gerek yok. Ne aradığınızı gündelik Türkçeyle
+        anlatın; Fihrist bunu tema, tür ve dönem sorgularına çevirip iki
+        kataloğu birden tarasın.
+      </p>
+      <div class="cta-row">
+        <a class="badge" href="#" aria-disabled="true">
+          <span>Yakında App Store’da<small>iPhone ve iPad için</small></span>
+        </a>
+        <span class="note">Ücretsiz · Hesap gerekmiyor</span>
+      </div>
+    </div>
+    <img class="shot" src="gorseller/1-anasayfa.png" alt="Fihrist ana ekranı">
+  </div>
+</header>
+
+<section id="nasil">
+  <div class="wrap">
+    <h2>Tek cümle, onlarca sorgu</h2>
+    <p class="sub">
+      Arama kutusuna yazdığınız cümle olduğu gibi kataloğa gönderilmiyor.
+      Önce ne demek istediğiniz çözümleniyor, sonra bu anlam kataloğun
+      anladığı dile çevriliyor.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Anlıyor</h3>
+        <p>Cümle Türkçe köklerine ayrılıyor; ruh hâli, tür, tema, yazar adı ve
+        yıl aralığı ayıklanıyor. “Dostoyevski’nin” yazsanız da ekler ayrılıp
+        yazar doğru bulunuyor.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Genişletiyor</h3>
+        <p>Tek arama, onlarca katalog sorgusuna dönüşüyor — Türkçe baskılar için
+        ayrı bir kol da dahil. “Ayrılık acısı”, <em>separation</em> ve
+        <em>grief</em> konularına bağlanıyor.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Sıralıyor</h3>
+        <p>Gelen yüzlerce kayıt eser düzeyinde tekilleştiriliyor, kaynaklar tek
+        kayda birleşiyor. Her kitabın yanında neden geldiği yazıyor.</p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><div class="big">444</div><p>tipik bir aramada taranan katalog kaydı</p></div>
+      <div class="fact"><div class="big">48</div><p>Keşfet ekranında hazır kategori</p></div>
+      <div class="fact"><div class="big">2</div><p>katalog: Open Library ve Google Books</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ekranlar">
+  <div class="wrap">
+    <h2>Uygulamadan</h2>
+    <p class="sub">Sonuçların yanındaki rozetler, sıralamanın nerede isabet
+    ettiğini görmenizi sağlıyor — kapalı bir kutu değil.</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="gorseller/4-arama.png" alt="Arama sonuçları ve eşleşme gerekçeleri">
+        <figcaption>Sorgunuzu nasıl anladığını söylüyor, her sonucun gerekçesini
+        gösteriyor.</figcaption>
+      </figure>
+      <figure>
+        <img src="gorseller/2-kesfet.png" alt="Keşfet ekranı">
+        <figcaption>Aramak istemiyorsanız 48 kategori: türler, ruh hâlleri,
+        temalar, edebiyat coğrafyaları.</figcaption>
+      </figure>
+      <figure>
+        <img src="gorseller/3-kitapligim.png" alt="Kitaplığım ekranı">
+        <figcaption>Okuyacağım, Okuyorum, Okudum rafları ve kitap notlarınız —
+        hepsi cihazınızda.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Verileriniz sizde kalır</h2>
+    <p class="sub">
+      Kitaplığınız ve notlarınız yalnızca cihazınızda saklanır; hiçbir sunucuya
+      gönderilmez. Hesap açmak zorunlu değil — ücretsiz hesap sadece günlük
+      arama hakkınızı 5’ten 50’ye çıkarır. Reklam yok, izleme yok.
+    </p>
+    <a class="badge" href="gizlilik.html"><span>Gizlilik politikası</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="destek.html">Destek</a>
+      <a href="gizlilik.html">Gizlilik</a>
+      <a href="mailto:tyerdekalmazer01@gmail.com">İletişim</a>
+    </div>
+    <div>
+      Kitap bilgileri Open Library ve Google Books kataloglarından alınmaktadır.
+      Kapak görselleri ilgili yayıncı ve hak sahiplerine aittir.
+    </div>
+    <div style="margin-top:10px;">© 2026 Taha Yerdekalmazer</div>
+  </div>
+</footer>
+
+</body>
+</html>

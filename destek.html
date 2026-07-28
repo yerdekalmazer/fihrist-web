@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destek — Fihrist</title>
+<style>
+  :root { --ink:#1d1a17; --soft:#57514b; --faint:#8a827a; --accent:#6b452f; --line:#e6e1db; --bg:#faf9f7; --card:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#f2efec; --soft:#c3bcb5; --faint:#8f8880; --accent:#c89b7b; --line:#332e29; --bg:#17140f; --card:#1f1b16; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:48px 20px 80px; background:var(--bg); color:var(--ink);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:680px; margin:0 auto; }
+  header { border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:28px; }
+  .brand { font-size:14px; font-weight:600; color:var(--accent); letter-spacing:.02em; }
+  h1 { font-size:30px; margin:8px 0 6px; letter-spacing:-.02em; }
+  .sub { color:var(--faint); font-size:15px; }
+  h2 { font-size:19px; margin:32px 0 10px; letter-spacing:-.01em; }
+  p, li { color:var(--soft); }
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px;
+            padding:14px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; color:var(--ink); list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  summary::before { content:"+ "; color:var(--accent); font-weight:700; }
+  details[open] summary::before { content:"– "; }
+  details p { margin:10px 0 2px; }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
+         padding:13px 24px; border-radius:10px; font-weight:600; margin-top:8px; }
+  a { color:var(--accent); }
+  footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--line);
+           font-size:14px; color:var(--faint); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;">← Fihrist</a></div>
+    <h1>Destek</h1>
+    <div class="sub">Sorunuz, öneriniz veya bir hata mı var? Yazın.</div>
+  </header>
+
+  <a class="cta" href="mailto:tyerdekalmazer01@gmail.com?subject=Fihrist%20destek">
+    E-posta gönder
+  </a>
+  <p style="font-size:14px;color:var(--faint);margin-top:10px;">
+    Genellikle birkaç gün içinde yanıtlıyorum. Bir hata bildiriyorsanız
+    cihaz modelinizi, iOS sürümünüzü ve yaptığınız aramayı yazarsanız çok yardımcı olur.
+  </p>
+
+  <h2>Sık sorulanlar</h2>
+
+  <details>
+    <summary>Hesap açmam gerekiyor mu?</summary>
+    <p>Hayır. Fihrist hesapsız kullanılabilir; günde 5 arama hakkınız olur.
+    Ücretsiz hesap açarsanız bu hak 50'ye çıkar. Kitaplığınız her iki durumda da
+    yalnızca cihazınızda saklanır.</p>
+  </details>
+
+  <details>
+    <summary>Günlük arama hakkı ne zaman yenileniyor?</summary>
+    <p>Her gün UTC saatiyle gece yarısı sıfırlanır. Bir "arama", yazdığınız
+    cümlenin tamamı için yapılan taramadır — arka planda onlarca katalog sorgusu
+    çalışsa bile hakkınızdan yalnızca bir tane düşer. Keşfet ekranında
+    kategorilere göz atmak hakkınızı harcamaz.</p>
+  </details>
+
+  <details>
+    <summary>Aradığım kitabı bulamıyorum</summary>
+    <p>Fihrist, Open Library ve Google Books kataloglarını tarar. Özellikle yerel
+    yayınevlerinin bazı Türkçe baskıları bu kataloglarda eksik olabiliyor.
+    Kitabın özgün adıyla ya da yazar adıyla aramayı deneyin. Bulamadığınız
+    kitapları bana yazarsanız aramayı iyileştirmeme yardımcı olursunuz.</p>
+  </details>
+
+  <details>
+    <summary>Sonuçlar aradığımla alakasız</summary>
+    <p>Her sonucun altında neden geldiğini gösteren rozetler var ("Tema: …",
+    "Bu yazarın eseri", "Başlıkta geçiyor"). Sonuç listesinin üstündeki
+    "Anladığım" satırı da sorgunuzu nasıl yorumladığımı gösterir. Yanlış
+    yorumlanan bir arama görürseniz sorgunuzu ve beklediğiniz sonucu bana
+    gönderin — sözlüğe ekleyerek düzeltebiliyorum.</p>
+  </details>
+
+  <details>
+    <summary>Kitaplığımı nasıl yedeklerim?</summary>
+    <p>Ayarlar → Kitaplığı dışa aktar. Kitaplığınız okunabilir bir JSON dosyası
+    olarak kaydedilir. Uygulamayı silerseniz kitaplığınız da silinir, bu yüzden
+    önemli notlarınız varsa dışa aktarmanızı öneririm.</p>
+  </details>
+
+  <details>
+    <summary>Verilerimi silmek istiyorum</summary>
+    <p>Cihazınızdaki kitaplık için: Ayarlar → Kitaplığı temizle. Hesabınızın
+    tamamen silinmesi için bana e-posta gönderin; talebiniz en geç 30 gün içinde
+    yerine getirilir. Ayrıntılar
+    <a href="gizlilik.html">gizlilik politikasında</a>.</p>
+  </details>
+
+  <footer>
+    <a href="gizlilik.html">Gizlilik politikası</a> ·
+    <a href="mailto:tyerdekalmazer01@gmail.com">tyerdekalmazer01@gmail.com</a><br>
+    Kitap bilgileri Open Library ve Google Books kataloglarından alınmaktadır.
+  </footer>
+</main>
+</body>
+</html>
